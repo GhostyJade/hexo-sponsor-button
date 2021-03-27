@@ -1,6 +1,6 @@
 {
   "name": "hexo-sponsor-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hexo plugin to add a sponsor button to your pages",
   "main": "index.js",
   "repository": "https://github.com/GhostyJade/hexo-sponsor-button.git",
