@@ -10,7 +10,6 @@ hexo.extend.tag.register('sponsor', function (args) {
       icon_size: '24px',
       icon_color: '#000000',
       username: undefined,
-      border_rounded: true,
       border_radius: undefined,
       background_color: undefined,
       container_padding: '8px'
