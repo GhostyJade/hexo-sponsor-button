@@ -12,7 +12,9 @@ hexo.extend.tag.register('sponsor', function (args) {
       username: undefined,
       border_radius: undefined,
       background_color: undefined,
-      container_padding: '8px'
+      container_padding: '8px',
+      url: undefined,
+      icon_name: undefined
     },
     hexo.config.funding
   );
@@ -37,7 +39,7 @@ hexo.extend.tag.register('sponsor', function (args) {
           padding:${config.container_padding}">
      <a href="${getSponsorUrl(config)}">
        <svg role="img" style="width: ${config.icon_size}; height:${config.icon_size}; fill:${config.icon_color}">
-         <path d="${simpleIcons.get(config.service).path}"></path>
+         <path d="${config.service !== 'custom' ? simpleIcons.get(config.service).path : simpleIcons.get(config.icon_name).path}"></path>
        </svg>
     ${(config.text === undefined
       ? `Support Me on ${config.service}`

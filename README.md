@@ -19,14 +19,16 @@ You need to add to your _config.yml these lines:
 
 ``` YAML
 funding:
-  service: ko-fi # At now, it only support ko-fi
-  username: 'name' # Your ko-fi username
+  service: ko-fi # At now, ko-fi, patreon, opencollective, liberapay, custom are supported
+  username: 'name' # Your service username
 ```
 
 To customize even more, here's all available parameters:
 ``` YAML
 funding:
-  service: ko-fi # string (required) The funding service
+  service: ko-fi # string (required) The funding service, if 'custom', url is required
+  url: 'https://example.com/' # string (required if service='custom'), your custom url
+  icon_name: 'name' # string (required if service='custom'), the icon displayed for your service, it's take from simple-icons's pack
   username: 'name' # string (required) Your ko-fi username
   enable: true|false # bool (default: true) Specifies if enable this plugin
   text: '' # string (default: undefined) If specified, overrides the default "Support Me on {service}" string
